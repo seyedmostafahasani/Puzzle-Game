@@ -8,7 +8,7 @@ $(window).load(function(){
     var ml , mr , nt , nb;
     var top = 0 , left = 0 , num=0;
     var coordinate , coordinateX , coordinateY;
-    var min = 1 , sec = 8;  //time for game
+    var min = 1 , sec = 5; // time for game
     var flag = true;
     var empty;
 
@@ -39,7 +39,7 @@ $(window).load(function(){
     o.y = arraynow[empty].top;
 
     // determine neighbor empty element
-    $('.puzzel li').hover(function(){
+    $('li').hover(function(){
         var bool = true;
         coordinate = $(this).position();
         coordinateX = coordinate.left;
@@ -79,7 +79,7 @@ $(window).load(function(){
     });
 
     // change place Tile
-    $('.puzzel li').click(function(){
+    $('.puzzle li').click(function(){
         if(flag){
             var p = $(this).position();
             mouse.x =  p.left;
@@ -93,7 +93,7 @@ $(window).load(function(){
                 arraynow[id].left-=100;
                 arraynow[empty].left=o.x;
                 $(this).css({left : o.x-100+'px'});
-                $('.puzzel li:nth-child('+empty+')').next().css({left : o.x+'px'});
+                $('li:nth-child('+empty+')').next().css({left : o.x+'px'});
             }
 
             mr = mouse.x + 100;
@@ -102,7 +102,7 @@ $(window).load(function(){
                 arraynow[id].left+=100;
                 arraynow[empty].left=o.x;
                 $(this).css({left : o.x+100+'px'} );
-                $('.puzzel li:nth-child('+empty+')').next().css({left : o.x+'px'});
+                $('li:nth-child('+empty+')').next().css({left : o.x+'px'});
             }
 
             nt = mouse.y-100;
@@ -111,7 +111,7 @@ $(window).load(function(){
                 arraynow[id].top-=100;
                 arraynow[empty].top=o.y;
                 $(this).css({top : o.y-100+'px'} );
-                $('.puzzel li:nth-child('+empty+')').next().css({top : o.y+'px'} );
+                $('li:nth-child('+empty+')').next().css({top : o.y+'px'} );
             }
 
             nb = mouse.y+100;
@@ -120,7 +120,7 @@ $(window).load(function(){
                 arraynow[id].top+=100;
                 arraynow[empty].top=o.y;
                 $(this).css({top : o.y+100+'px'} );
-                $('.puzzel li:nth-child('+empty+')').next().css({top : o.y+'px'} );
+                $('li:nth-child('+empty+')').next().css({top : o.y+'px'} );
             }
 
             test_End();
@@ -129,26 +129,12 @@ $(window).load(function(){
 
     // test for end puzzel
     function test_End(){
-        for(var i=0; i<9 ;i++){
+        for(var i=0; i<arraynow.length ;i++){
             if(arraynow[i].left == arrayactualx[i] && arraynow[i].top == arrayactualy[i] ){
                 num++;
                 if(num==9){
-                    // if (confirm("Are you want to play again?"))
-                    //   {
-                    //   	flag = true;
-                    //window.location.reload();
-                    // }
-                    alert('dd');
+                    alert('you succeed to create puzzel. ');
                     flag = false;
-
-                    // else
-                    //   {
-                    //   min = $('#min').text();
-                    // 		sec = $('#sec').text();
-                    // 		$('#min').text(min);
-                    // 		$('#sec').text(sec);
-                    // 		flag = false;
-                    //   }
                 }
             }
         }
@@ -200,10 +186,9 @@ $(window).load(function(){
                     $('.timer .min').addClass('b-s-m-p');
                     $('.timer .sec').addClass('b-s-s-p');
                 });
-                alert('end of time');
                 flag = false;
+                alert('End of time!!');
             }
-
         }
     }
 
