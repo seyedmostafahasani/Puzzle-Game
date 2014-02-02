@@ -16,25 +16,25 @@ body{
     padding-top: 1px;
 }
 
-.container .puzzel , .container .p-t{
+.container .puzzle , .container .p-t{
     float: left;
 }
 
-.puzzel{
+.puzzle{
     width: 300px;
     height : 300px;
     margin: 10px 30px;
     box-shadow: 0 0 0 15px #fff;
 }
 
-.puzzel ul{
+.puzzle ul{
     list-style: none;
     width: 300px;
     height: 300px;
     position: relative;
 }
 
-.puzzel li{
+.puzzle li{
     position: absolute;
     width: 99px;
     height : 99px;
