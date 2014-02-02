@@ -164,9 +164,9 @@ li#i8{
 }
 
 @-moz-keyframes end{
-    0%{box-shadow: 0 0 5px 3px #FF3737};
+    0%{box-shadow: 0 0 5px 3px #FF3737;}
 
-100%{box-shadow: 0 0 5px 3px #FF1C1C};
+100%{box-shadow: 0 0 5px 3px #FF1C1C;}
     }
 
 .b-s-m , .b-s-s{
