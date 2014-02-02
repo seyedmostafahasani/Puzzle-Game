@@ -1,0 +1,184 @@
+@import url(http://fonts.googleapis.com/css?family=Offside);
+body{
+    background-image: url('http://i.cubeupload.com/nVeo8e.jpg');
+}
+
+.badboy{
+    width: 0;
+    height: 0;
+    clear: both;
+}
+
+.container{
+    width: 660px;
+    position: relative;
+    margin: 160px auto 0;
+    padding-top: 1px;
+}
+
+.container .puzzel , .container .p-t{
+    float: left;
+}
+
+.puzzel{
+    width: 300px;
+    height : 300px;
+    margin: 10px 30px;
+    box-shadow: 0 0 0 15px #fff;
+}
+
+.puzzel ul{
+    list-style: none;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.puzzel li{
+    position: absolute;
+    width: 99px;
+    height : 99px;
+    border : 1px solid rgb(128, 117, 117);
+    -webkit-transition: all .25s linear;
+    -moz-transition: all .25s linear;
+    -ms-transition: all .25s linear;
+    -o-transition: all .25s linear;
+    transition: all .25s linear;
+}
+
+li.neighbor:hover{
+    z-index: 2;
+    box-shadow: 0 0 6px 4px #000;
+}
+
+li#i0{
+    left: 0px; top: 200px;
+}
+
+li#i1{
+    left: 200px; top: 100px;
+}
+
+li#i2{
+    left: 100px; top: 0px;
+    background: #1F1F1E;
+}
+
+li#i3{
+    left: 100px; top: 200px;
+}
+
+li#i4{
+    left: 200px; top: 0;
+}
+
+li#i5{
+    left: 0; top: 0;
+}
+
+li#i6{
+    left: 0; top: 100px;
+}
+
+li#i7{
+    left: 100px; top: 100px;
+}
+
+li#i8{
+    left: 200px ; top: 200px;
+}
+
+.img{
+    width: 300px;
+    height: 300px;
+    margin: 5px 10px;
+}
+
+.p-t{
+    width: 200px;
+    padding-bottom: 25px;
+    margin : 40px 0 40px 100px;
+}
+
+.pattern{
+    width: 150px;
+    height: 150px;
+    margin: 15px auto;
+    background: url(../image/i5p.jpg);
+    position: relative;
+    box-shadow: 0 0 0 5px #fff;
+}
+
+.pattern:before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #1F1F1E;
+    right: 0;
+}
+
+.timer{
+    width: 122px;
+    height: 50px;
+    margin: 25px auto 0;
+}
+
+.timer .min , .timer .sec , .timer .two-point{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin: 4px;
+    border : 1px solid #2F2E2E;
+    font-family: 'Offside';
+    font-size: 30px;
+    color : #456789;
+    text-align: center;
+    box-shadow: 0 0 2px 2px #000;
+}
+
+.timer .two-point{
+    font-family: 'Times New Roman';
+    width: 14px;
+    border : 0;
+    box-shadow: 0 0 0;
+}
+
+.timer span{
+    display: block;
+    padding: 5px 2px;
+}
+
+.timer #t-p{
+    padding: 2px;
+}
+
+@-keyframes end{
+	0%{box-shadow: 0 0 5px 3px #FF3737};
+	100%{box-shadow: 0 0 5px 3px #FF1C1C};
+}
+
+@-webkit-keyframes end{
+    0%{box-shadow: 0 0 5px 3px #FF3737;}
+    100%{box-shadow: 0 0 5px 3px #FF1C1C;}
+}
+
+@-moz-keyframes end{
+    0%{box-shadow: 0 0 5px 3px #FF3737};
+
+100%{box-shadow: 0 0 5px 3px #FF1C1C};
+    }
+
+.b-s-m , .b-s-s{
+    -webkit-animation: end 1s linear infinite ;
+    -moz-animation: end 1s linear infinite ;
+    -o-animation: end 1s linear infinite ;
+    animation: end 1s linear infinite ;
+}
+
+.b-s-m-p , .b-s-s-p{
+    -webkit-animation : end 1s linear infinite ;
+    -webkit-animation-play-state : paused;
+    -moz-animation : end 1s linear infinite ;
+    -moz-animation-play-state : paused;
+}
