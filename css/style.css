@@ -154,8 +154,8 @@ li#i8{
 }
 
 @-keyframes end{
-	0%{box-shadow: 0 0 5px 3px #FF3737};
-	100%{box-shadow: 0 0 5px 3px #FF1C1C};
+	0%{box-shadow: 0 0 5px 3px #FF3737;}
+	100%{box-shadow: 0 0 5px 3px #FF1C1C;}
 }
 
 @-webkit-keyframes end{
